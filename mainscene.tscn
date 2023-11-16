@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://da0ueypaevh5p"]
+
+[ext_resource type="Texture2D" uid="uid://cyiear4cwo188" path="res://FRONTYARD NEW.png" id="1_d4ord"]
+[ext_resource type="Texture2D" uid="uid://dsxpee03q0egq" path="res://YARD BG-1.png.png" id="1_yhfis"]
+[ext_resource type="PackedScene" uid="uid://dq1i0eft3s8s0" path="res://collision_outside.tscn" id="3_7c3e8"]
+[ext_resource type="PackedScene" uid="uid://dbswivjcm7phr" path="res://character_body_2d.tscn" id="4_l7sxw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2onjv"]
+texture = ExtResource("1_d4ord")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+1:0/0 = 0
+0:1/next_alternative_id = 2
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_uy2if"]
+sources/0 = SubResource("TileSetAtlasSource_2onjv")
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-1, 0)
+
+[node name="YardBg-1_png" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(579.5, 494)
+scale = Vector2(11.55, 9.89)
+texture = ExtResource("1_yhfis")
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+tile_set = SubResource("TileSet_uy2if")
+format = 2
+layer_0/tile_data = PackedInt32Array(327687, 65536, 0)
+
+[node name="Collision-Outside" parent="." instance=ExtResource("3_7c3e8")]
+position = Vector2(1, -120)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_l7sxw")]
+texture_filter = 1
+position = Vector2(526, 593)
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

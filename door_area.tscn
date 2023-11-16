@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bir30xy8uny6m"]
+
+[ext_resource type="Script" path="res://door_area.gd" id="1_ndvsr"]
+
+[node name="doorarea" type="Area2D"]
+script = ExtResource("1_ndvsr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

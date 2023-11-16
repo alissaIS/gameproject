@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://euxbrd1iguck"]
+
+[ext_resource type="Texture2D" uid="uid://bb208h00d1fvx" path="res://KEY REGULAR.png" id="1_vepy7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36i3p"]
+size = Vector2(68, 30)
+
+[node name="GoldKey" type="Area2D"]
+
+[node name="KeyRegular" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, 0)
+scale = Vector2(2, 2.011)
+texture = ExtResource("1_vepy7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15, 1)
+shape = SubResource("RectangleShape2D_36i3p")

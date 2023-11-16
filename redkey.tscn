@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlpk424lx5mdv"]
+
+[ext_resource type="Texture2D" uid="uid://cixone4taj4i3" path="res://RED KEY.png" id="1_am3w0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hy3l6"]
+size = Vector2(102, 43)
+
+[node name="REDKEY" type="Area2D"]
+
+[node name="RedKey" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3.01, 2.86)
+texture = ExtResource("1_am3w0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21, 1.5)
+shape = SubResource("RectangleShape2D_hy3l6")

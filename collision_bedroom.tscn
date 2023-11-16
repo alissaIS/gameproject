@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://di6wsvbfutv3r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhho1"]
+size = Vector2(1151, 349.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvub1"]
+size = Vector2(114, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eshpi"]
+size = Vector2(1263.63, 105)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6radp"]
+size = Vector2(126, 755)
+
+[node name="Collision-Bedroom" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(573, 175.125)
+shape = SubResource("RectangleShape2D_qhho1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1206, 324)
+shape = SubResource("RectangleShape2D_mvub1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(632.188, 701)
+shape = SubResource("RectangleShape2D_eshpi")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-64, 377.5)
+shape = SubResource("RectangleShape2D_6radp")

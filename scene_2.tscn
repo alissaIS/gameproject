@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://3a1uitwjucp4"]
+
+[ext_resource type="Texture2D" uid="uid://c3ive8iqhtyr7" path="res://Room 1 BG-1.png.png" id="1_l33vx"]
+[ext_resource type="PackedScene" uid="uid://di6wsvbfutv3r" path="res://collision_bedroom.tscn" id="2_ij8iu"]
+
+[node name="scene2" type="Node2D"]
+
+[node name="Room1Bg-1_png" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 434)
+scale = Vector2(11.5275, 10.555)
+texture = ExtResource("1_l33vx")
+
+[node name="Collision-Bedroom" parent="." instance=ExtResource("2_ij8iu")]
+position = Vector2(1, 29)
